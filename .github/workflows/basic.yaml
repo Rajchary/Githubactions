@@ -1,6 +1,6 @@
 name: Basic workflow
 
-on: push
+on: [push]
 
 jobs: 
   job1:
@@ -11,4 +11,15 @@ jobs:
       - run: echo "Hello world"
       - name: print branch and event triggered
       - run: echo "working branch ${{github.ref}}, triggered by event ${{ github.event_name }} event"
+  job2:
+    name: Checkout code
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
+      - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
+      - name: List files in the repository
+        run: |
+          ls ${{ github.workspace }}
+      - run: echo "🍏 This job's status is ${{ job.status }}."
         
