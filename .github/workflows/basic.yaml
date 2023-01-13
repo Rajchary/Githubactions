@@ -4,5 +4,4 @@ jobs:
   Print-Basic-Details:
     runs-on: ubuntu-latest
     steps:
-      - name: Say hellow world
       - run: echo "Hello world"
