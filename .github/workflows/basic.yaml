@@ -2,10 +2,7 @@ name: Basic workflow
 on: [push]
 jobs: 
   job1:
-    name: First job
     runs-on: ubuntu-latest
     steps: 
       - name: say hello
       - run: echo "Hello world"
-      - name: print branch and event triggered
-      - run: echo "working branch ${{ github.ref }}, triggered by event ${{ github.event_name }} event"
