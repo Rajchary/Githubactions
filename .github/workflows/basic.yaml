@@ -13,3 +13,8 @@ jobs:
     runs-on: macos-latest
     steps:
       - run: echo "Date is $(date)"
+  Final-Dependency-Job:
+    needs: [Print-Date-On-Ubuntu,Print-Date-on-Windows,Print-Date-On-MacOs]
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "${{ github.actor }} is testing out GitHub Actions 🚀"
