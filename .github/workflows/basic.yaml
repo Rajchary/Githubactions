@@ -2,7 +2,7 @@ name: Basic workflow
 on: [push]
 jobs:
   Print-Basic-Info:
-  runs-on: ubuntu-latest
-  steps:
-    - name: say hello world
-    - run: echo "Hello world"
+    runs-on: ubuntu-latest
+    steps:
+      - name: say hello world
+      - run: echo "Hello world"
