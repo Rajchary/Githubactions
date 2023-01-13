@@ -12,4 +12,4 @@ jobs:
   Print-Date-On-MacOs:
     runs-on: macos-latest
     steps:
-      - run: echo "Date"
+      - run: echo "Date is $(date)"
