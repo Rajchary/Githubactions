@@ -5,15 +5,15 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: action@checkoutv3
+      - uses: actions/checkout@v3
       - run: python app.py
       
   build:
     needs: [test]
     runs-on: ubuntu-latest
     steps:
-      - uses: action@checkoutv3
-      - uses: action@upload-artifactv3
+      - uses: actions/checkout@v3
+      - uses: action/upload-artifact@v3
         with: 
           name: app
           path: .
