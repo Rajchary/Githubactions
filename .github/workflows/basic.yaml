@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: action@checkoutv3
-      - uses: action@upload-artifact@v3
+      - uses: action@upload-artifactv3
         with: 
           name: app
           path: .
